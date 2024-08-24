@@ -1,11 +1,10 @@
 import React from 'react';
 
 function ExampleComponents({ colors, isSobrietyMode }) {
-  // Définition des couleurs en fonction du mode sobriété
-  const primaryColor = colors[0]?.hex || '#000'; // Utilisé pour certains éléments principaux
-  const bgColor = colors[3]?.hex || '#f5f5f5'; // Utilisé pour le fond du bouton et du tooltip
-  const textColor = colors[6]?.hex || '#333'; // Utilisé pour le texte
-  const borderColor = colors[9]?.hex || textColor; // Utilisé pour les bordures et les textes
+  const primaryColor = colors[0]?.hex || '#000'; 
+  const bgColor = colors[3]?.hex || '#f5f5f5'; 
+  const textColor = colors[6]?.hex || '#333'; 
+  const borderColor = colors[9]?.hex || textColor; 
 
   return (
     
