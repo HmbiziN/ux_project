@@ -27,7 +27,7 @@ function App() {
   );
 
   return (
-    <Router basename="/ux_project"> 
+    <Router basename="/ux_project">
       <div className="bg-gray-100 min-h-screen flex flex-col md:flex-row">
         <Sidebar />
         <div className="flex-grow p-10 ml-0 md:ml-20 mt-16 md:mt-0 flex justify-center items-center pb-24">
