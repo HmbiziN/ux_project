@@ -5,7 +5,8 @@ function ExampleComponents({ colors, isSobrietyMode }) {
   const bgColor = colors[3]?.hex || '#f5f5f5'; 
   const textColor = colors[6]?.hex || '#333'; 
   const borderColor = colors[9]?.hex || textColor; 
-
+  const leftBorderColor = colors[6]?.hex || '#ccc';
+  const penultimateColor = colors[colors.length - 2]?.hex || '#ccc'; 
   return (
     
     <div className="space-y-8">
@@ -222,9 +223,14 @@ function ExampleComponents({ colors, isSobrietyMode }) {
 
           <div>
             <h3 className="text-xl font-bold mb-4 text-gray-800">Carte</h3>
+
+            {/* Première Carte avec bordure gauche */}
             <div
-              className="p-6 rounded-lg shadow-lg"
-              style={{ backgroundColor: colors[0]?.hex || '#f5f5f5' }}
+              className="p-6 rounded-lg shadow-lg mb-4"
+              style={{
+                backgroundColor: colors[0]?.hex || '#f5f5f5',
+                borderLeft: `5px solid ${leftBorderColor}`
+              }}
             >
               <h4 className="text-lg font-bold mb-2" style={{ color: colors[5]?.hex || '#ccc' }}>
                 Titre de la Carte
@@ -233,6 +239,39 @@ function ExampleComponents({ colors, isSobrietyMode }) {
                 Ceci est un exemple de contenu d'une carte, utilisant les couleurs sélectionnées.
               </p>
             </div>
+
+              {/* Deuxième Carte en longueur avec dégradé et chiffre, largeur réduite */}
+            <div
+              className="relative p-6 rounded-lg shadow-lg text-white h-64 w-1/2" // Réduction de la largeur à 50%
+              style={{
+                background: `linear-gradient(135deg, ${colors[1]?.hex || '#ff7e5f'} 0%, ${colors[2]?.hex || '#feb47b'} 100%)`,
+              }}
+            >
+             
+              <div className="flex flex-col justify-between h-full">
+                <div>
+                  <h4 className="text-lg font-bold mb-2" style={{ color: penultimateColor }}>
+                    Titre de la Carte
+                  </h4>
+                  <p>
+                  Ceci est un exemple de contenu d'une carte, utilisant les couleurs sélectionnées.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <a
+                    href="#"
+                    className="text-white font-bold py-2 px-4 rounded"
+                    style={{
+                      backgroundColor: colors[2]?.hex || '#007bff',
+                    }}
+                  >
+                    Voir plus
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
           </div>
         </>
       )}
