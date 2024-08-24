@@ -10,27 +10,26 @@ function ExampleComponents({ colors }) {
       {/* Exemple de Boutons */}
       <div>
         <h3 className="text-xl font-bold mb-4 text-gray-800">Boutons</h3>
-        <button
-          className="py-2 px-4 rounded font-semibold text-white"
-          style={{ backgroundColor: primaryColor }}
-        >
-          Bouton Principal
-        </button>
-        <button
-          className="ml-4 py-2 px-4 rounded font-semibold text-white"
-          style={{ backgroundColor: secondaryColor }}
-        >
-          Bouton Secondaire
-        </button>
+        <div className="flex flex-wrap space-y-2">
+          <button
+            className="py-2 px-4 rounded font-semibold text-white"
+            style={{ backgroundColor: primaryColor }}
+          >
+            Bouton Principal
+          </button>
+          <button
+            className="ml-0 md:ml-4 md:ml-4 py-2 px-4 rounded font-semibold text-white"
+            style={{ backgroundColor: secondaryColor }}
+          >
+            Bouton Secondaire
+          </button>
+        </div>
       </div>
 
       {/* Exemple de Tooltip */}
       <div>
         <h3 className="text-xl font-bold mb-4 text-gray-800">Tooltip</h3>
-        <div
-          className="relative group"
-          style={{ display: 'inline-block' }}
-        >
+        <div className="relative group inline-block">
           <button
             className="py-2 px-4 rounded font-semibold text-white"
             style={{ backgroundColor: primaryColor }}
