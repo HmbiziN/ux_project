@@ -41,15 +41,15 @@ function App() {
           </div>
           <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">Sélectionnez une Couleur</h1>
           <ColorSelector palettes={palettes} onSelect={handleColorSelect} />
-          {paletteName && (
+          
+        </div>
+
+        <div className="w-full md:w-1/2 flex flex-col space-y-10">
+        {paletteName && (
             <h2 className="text-2xl font-semibold mt-10 text-center text-gray-700">{paletteName}</h2>
           )}
           <ColorSwatches colors={filteredPalette} />
-        </div>
-
-        <div className="w-full md:w-1/2">
-        <ExampleComponents colors={filteredPalette} isSobrietyMode={isSobrietyMode} />
-
+          <ExampleComponents colors={filteredPalette} isSobrietyMode={isSobrietyMode} />
         </div>
       </div>
     </div>

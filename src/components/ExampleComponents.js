@@ -8,6 +8,7 @@ function ExampleComponents({ colors, isSobrietyMode }) {
   const borderColor = colors[9]?.hex || textColor; // Utilisé pour les bordures et les textes
 
   return (
+    
     <div className="space-y-8">
       {/* Affichage en mode sobriété */}
       {isSobrietyMode ? (
