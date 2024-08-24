@@ -1,0 +1,107 @@
+import React from 'react';
+
+function ExampleComponents({ colors, isSobrietyMode }) {
+  // Définir les couleurs pour le mode sobriété
+  const sobrietyPrimaryColor = colors[0]?.hex || '#ccc';
+  const sobrietyBackgroundColor = colors[3]?.hex || '#f5f5f5';
+  const sobrietyTextColor = colors[6]?.hex || '#333';
+
+  if (isSobrietyMode) {
+    // Mode Sobriété : Utiliser les couleurs spécifiques et n'afficher que le bouton principal
+    return (
+      <div className="space-y-8" style={{ backgroundColor: sobrietyBackgroundColor, color: sobrietyTextColor, padding: '20px', borderRadius: '8px' }}>
+        <button
+          style={{
+            backgroundColor: sobrietyPrimaryColor,
+            color: sobrietyBackgroundColor,
+            padding: '10px 20px',
+            borderRadius: '4px',
+            border: 'none',
+            cursor: 'pointer'
+          }}
+        >
+          Bouton Principal
+        </button>
+
+        <div style={{ backgroundColor: sobrietyTextColor, color: sobrietyBackgroundColor, padding: '10px', borderRadius: '4px' }}>
+          <strong>Toast Notification</strong>
+          <p>Exemple de message de notification toast.</p>
+        </div>
+
+        <div style={{ border: `1px solid ${sobrietyPrimaryColor}`, padding: '15px', borderRadius: '4px' }}>
+          <h3 style={{ color: sobrietyPrimaryColor }}>Titre de la Notification</h3>
+          <p style={{ color: sobrietyTextColor }}>Texte de notification avec l'avant-dernière couleur.</p>
+        </div>
+
+        <div style={{ backgroundColor: sobrietyPrimaryColor, color: sobrietyBackgroundColor, padding: '15px', borderRadius: '4px' }}>
+          <p>Ceci est un exemple de contenu d'une carte, utilisant les couleurs sélectionnées.</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Mode normal : inchangé
+  const primaryColor = colors[0]?.hex || '#ccc';
+  const backgroundColor = colors[1]?.hex || '#f5f5f5';
+  const textColor = colors[2]?.hex || '#333';
+  const accentColor = colors[3]?.hex || '#666';
+
+  return (
+    <div className="space-y-8" style={{ backgroundColor, color: textColor, padding: '20px', borderRadius: '8px' }}>
+      <button
+        style={{
+          backgroundColor: primaryColor,
+          color: backgroundColor,
+          padding: '10px 20px',
+          borderRadius: '4px',
+          border: 'none',
+          cursor: 'pointer'
+        }}
+      >
+        Bouton Principal
+      </button>
+
+      <div style={{ backgroundColor: accentColor, color: backgroundColor, padding: '10px', borderRadius: '4px' }}>
+        <strong>Toast Notification</strong>
+        <p>Exemple de message de notification toast.</p>
+      </div>
+
+      <div style={{ border: `1px solid ${primaryColor}`, padding: '15px', borderRadius: '4px' }}>
+        <h3 style={{ color: primaryColor }}>Titre de la Notification</h3>
+        <p style={{ color: accentColor }}>Texte de notification avec la couleur d'accentuation.</p>
+      </div>
+
+      <div style={{ backgroundColor: primaryColor, color: backgroundColor, padding: '15px', borderRadius: '4px' }}>
+        <p>Ceci est un exemple de contenu d'une carte, utilisant les couleurs sélectionnées.</p>
+      </div>
+
+      <button
+        style={{
+          backgroundColor: colors[1]?.hex || '#ddd',
+          color: textColor,
+          padding: '10px 20px',
+          borderRadius: '4px',
+          border: 'none',
+          cursor: 'pointer'
+        }}
+      >
+        Bouton Secondaire
+      </button>
+
+      <button
+        style={{
+          backgroundColor: 'transparent',
+          color: primaryColor,
+          padding: '10px 20px',
+          borderRadius: '4px',
+          border: `1px solid ${primaryColor}`,
+          cursor: 'pointer'
+        }}
+      >
+        Bouton Outline
+      </button>
+    </div>
+  );
+}
+
+export default ExampleComponents;
