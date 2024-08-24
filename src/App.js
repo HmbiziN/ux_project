@@ -63,9 +63,9 @@ function App() {
                 </div>
               } />
               <Route path="/theme" element={
-                <div className="bg-white p-8 rounded-lg shadow-lg w-full md:w-1/2 flex justify-center items-center">
-                  <Tendance /> 
-                </div>
+                <div className="w-full flex justify-center items-center">
+    <Tendance />
+  </div>
               } />
               <Route path="/" element={<Navigate to="/colors" replace />} />
             </Routes>
