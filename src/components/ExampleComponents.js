@@ -248,36 +248,35 @@ function ExampleComponents({ colors, isSobrietyMode }) {
               </p>
             </div>
 
-              {/* Deuxième Carte en longueur avec dégradé et chiffre, largeur réduite */}
             <div
-              className="relative p-6 rounded-lg shadow-lg text-white h-64 w-1/2" // Réduction de la largeur à 50%
-              style={{
-                background: `linear-gradient(135deg, ${colors[1]?.hex || '#ff7e5f'} 0%, ${colors[2]?.hex || '#feb47b'} 100%)`,
-              }}
-            >
-             
-              <div className="flex flex-col justify-between h-full">
-                <div>
-                  <h4 className="text-lg font-bold mb-2" style={{ color: penultimateColor }}>
-                    Titre de la Carte
-                  </h4>
-                  <p>
-                  Ceci est un exemple de contenu d'une carte, utilisant les couleurs sélectionnées.
-                  </p>
-                </div>
-                <div className="mt-4">
-                  <a
-                    href="#"
-                    className="text-white font-bold py-2 px-4 rounded"
-                    style={{
-                      backgroundColor: colors[2]?.hex || '#007bff',
-                    }}
-                  >
-                    Voir plus
-                  </a>
-                </div>
-              </div>
-            </div>
+  className="relative p-6 rounded-lg shadow-lg text-white h-64 w-full md:w-1/2" // Pleine largeur sur mobile, 50% sur écrans md et plus
+  style={{
+    background: `linear-gradient(135deg, ${colors[1]?.hex || '#ff7e5f'} 0%, ${colors[2]?.hex || '#feb47b'} 100%)`,
+  }}
+>
+  <div className="flex flex-col justify-between h-full">
+    <div>
+      <h4 className="text-lg font-bold mb-2" style={{ color: penultimateColor }}>
+        Titre de la Carte
+      </h4>
+      <p>
+        Ceci est un exemple de contenu d'une carte, utilisant les couleurs sélectionnées.
+      </p>
+    </div>
+    <div className="mt-4">
+      <a
+        href="#"
+        className="text-white font-bold py-2 px-4 rounded"
+        style={{
+          backgroundColor: colors[2]?.hex || '#007bff',
+        }}
+      >
+        Voir plus
+      </a>
+    </div>
+  </div>
+</div>
+
 
 
           </div>
