@@ -13,32 +13,32 @@ function ExampleComponents({ colors }) {
       {/* Boutons Principal */}
       <div>
         <p className="font-semibold text-gray-600">Bouton Principal</p>
-        <div className="flex space-x-4">
+        <div className="space-y-4 md:flex md:space-x-4 md:space-y-0">
           {/* Default */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white"
-            style={{ backgroundColor: primaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white w-full md:w-auto"
+            style={{ backgroundColor: primaryColor }}
           >
             Default
           </button>
           {/* Hover */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white opacity-80"
-            style={{ backgroundColor: primaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white opacity-80 w-full md:w-auto"
+            style={{ backgroundColor: primaryColor }}
           >
             Hover
           </button>
           {/* Active */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white transform scale-95"
-            style={{ backgroundColor: primaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white transform scale-95 w-full md:w-auto"
+            style={{ backgroundColor: primaryColor }}
           >
             Active
           </button>
           {/* Disabled */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white opacity-50 cursor-not-allowed"
-            style={{ backgroundColor: primaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white opacity-50 cursor-not-allowed w-full md:w-auto"
+            style={{ backgroundColor: primaryColor }}
             disabled
           >
             Disabled
@@ -49,32 +49,32 @@ function ExampleComponents({ colors }) {
       {/* Boutons Secondaire */}
       <div>
         <p className="font-semibold text-gray-600">Bouton Secondaire</p>
-        <div className="flex space-x-4">
+        <div className="space-y-4 md:flex md:space-x-4 md:space-y-0">
           {/* Default */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white"
-            style={{ backgroundColor: secondaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white w-full md:w-auto"
+            style={{ backgroundColor: secondaryColor }}
           >
             Default
           </button>
           {/* Hover */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white opacity-80"
-            style={{ backgroundColor: secondaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white opacity-80 w-full md:w-auto"
+            style={{ backgroundColor: secondaryColor }}
           >
             Hover
           </button>
           {/* Active */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white transform scale-95"
-            style={{ backgroundColor: secondaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white transform scale-95 w-full md:w-auto"
+            style={{ backgroundColor: secondaryColor }}
           >
             Active
           </button>
           {/* Disabled */}
           <button
-            className="py-2 px-4 rounded font-semibold text-white opacity-50 cursor-not-allowed"
-            style={{ backgroundColor: secondaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold text-white opacity-50 cursor-not-allowed w-full md:w-auto"
+            style={{ backgroundColor: secondaryColor }}
             disabled
           >
             Disabled
@@ -85,32 +85,32 @@ function ExampleComponents({ colors }) {
       {/* Boutons Outline */}
       <div>
         <p className="font-semibold text-gray-600">Bouton Outline</p>
-        <div className="flex space-x-4">
+        <div className="space-y-4 md:flex md:space-x-4 md:space-y-0">
           {/* Default */}
           <button
-            className="py-2 px-4 rounded font-semibold border"
-            style={{ color: primaryColor, borderColor: primaryColor, minWidth: "100px" }}
+            className="py-2 px-4 rounded font-semibold border w-full md:w-auto"
+            style={{ color: primaryColor, borderColor: primaryColor }}
           >
             Default
           </button>
           {/* Hover */}
           <button
-            className="py-2 px-4 rounded font-semibold border bg-primary-light"
-            style={{ color: primaryColor, borderColor: primaryColor, minWidth: "100px", opacity: 0.8 }}
+            className="py-2 px-4 rounded font-semibold border bg-primary-light w-full md:w-auto"
+            style={{ color: primaryColor, borderColor: primaryColor, opacity: 0.8 }}
           >
             Hover
           </button>
           {/* Active */}
           <button
-            className="py-2 px-4 rounded font-semibold border bg-primary-dark"
-            style={{ color: primaryColor, borderColor: primaryColor, minWidth: "100px", transform: "scale(0.95)" }}
+            className="py-2 px-4 rounded font-semibold border bg-primary-dark w-full md:w-auto"
+            style={{ color: primaryColor, borderColor: primaryColor, transform: "scale(0.95)" }}
           >
             Active
           </button>
           {/* Disabled */}
           <button
-            className="py-2 px-4 rounded font-semibold border opacity-50 cursor-not-allowed"
-            style={{ color: primaryColor, borderColor: primaryColor, minWidth: "100px", backgroundColor: 'transparent' }}
+            className="py-2 px-4 rounded font-semibold border opacity-50 cursor-not-allowed w-full md:w-auto"
+            style={{ color: primaryColor, borderColor: primaryColor, backgroundColor: 'transparent' }}
             disabled
           >
             Disabled
@@ -141,34 +141,34 @@ function ExampleComponents({ colors }) {
       <div>
         <h3 className="text-xl font-bold mb-4 text-gray-800">Toasts</h3>
         
-           {/* Premier Toast */}
-      <div
-        className="p-4 rounded shadow-md"
-        style={{ backgroundColor: backgroundColor, color: primaryColor }}
-      >
-        <p className="font-semibold">Toast Notification</p>
-        <p style={{ color: lastColor }}>
-          Exemple de message de notification toast.
-        </p>
-      </div>
+        {/* Premier Toast */}
+        <div
+          className="p-4 rounded shadow-md"
+          style={{ backgroundColor: backgroundColor, color: primaryColor }}
+        >
+          <p className="font-semibold">Toast Notification</p>
+          <p style={{ color: lastColor }}>
+            Exemple de message de notification toast.
+          </p>
+        </div>
 
-      {/* Espacement entre les toasts */}
-      <div className="h-4"></div>
+        {/* Espacement entre les toasts */}
+        <div className="h-4"></div>
 
-      {/* Deuxième Toast */}
-      <div
-        className="p-4 rounded shadow-md border"
-        style={{
-          backgroundColor: colors[1]?.hex || '#ddd',   // 2ème couleur pour le fond
-          borderColor: colors[4]?.hex || '#bbb',       // 5ème couleur pour la bordure
-          color: colors[5]?.hex || '#888',             // 6ème couleur pour le titre
-        }}
-      >
-        <p className="font-semibold">Titre de la Notification</p>
-        <p style={{ color: colors[8]?.hex || '#666' }}>  {/* 9ème couleur pour le texte */}
-          Texte de notification avec l'avant-dernière couleur.
-        </p>
-      </div>
+        {/* Deuxième Toast */}
+        <div
+          className="p-4 rounded shadow-md border"
+          style={{
+            backgroundColor: colors[1]?.hex || '#ddd',   // 2ème couleur pour le fond
+            borderColor: colors[4]?.hex || '#bbb',       // 5ème couleur pour la bordure
+            color: colors[5]?.hex || '#888',             // 6ème couleur pour le titre
+          }}
+        >
+          <p className="font-semibold">Titre de la Notification</p>
+          <p style={{ color: colors[8]?.hex || '#666' }}>  {/* 9ème couleur pour le texte */}
+            Texte de notification avec l'avant-dernière couleur.
+          </p>
+        </div>
       </div>
 
       {/* Carte */}

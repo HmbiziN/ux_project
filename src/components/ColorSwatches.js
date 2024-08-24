@@ -20,7 +20,7 @@ function ColorSwatches({ colors }) {
           >
             <p className="text-center text-sm text-white font-semibold pt-5">{color.shade}</p>
           </div>
-          <p className="mt-2 text-xs md:text-sm text-gray-700">
+          <p className="mt-2 text-xs md:text-sm text-gray-700 min-h-[40px] flex flex-col justify-center">
             {color.hex}
             <button
               onClick={() => handleCopy(color.hex)}
