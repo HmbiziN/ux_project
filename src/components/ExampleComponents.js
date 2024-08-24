@@ -7,6 +7,14 @@ function ExampleComponents({ colors, isSobrietyMode }) {
   const borderColor = colors[9]?.hex || textColor; 
   const leftBorderColor = colors[6]?.hex || '#ccc';
   const penultimateColor = colors[colors.length - 2]?.hex || '#ccc'; 
+  if (colors.length === 0) {
+    return (
+      <div className="text-center text-gray-600">
+        <p className="text-xl">Sélectionnez une couleur pour voir des exemples de composants avec les teintes associées.</p>
+      </div>
+    );
+  }
+
   return (
     
     <div className="space-y-8">
