@@ -7,6 +7,7 @@ import ExampleComponents from './components/ExampleComponents';
 import Sidebar from './components/SideBar';
 import Tendance from './components/Tendance';
 import Footer from './components/Footer';
+import DesignGuidelines from './components/DesignGuidelines'; // Import de la page "Guidelines de Design"
 
 function App() {
   const [selectedPalette, setSelectedPalette] = useState([]);
@@ -64,9 +65,10 @@ function App() {
               } />
               <Route path="/theme" element={
                 <div className="w-full flex justify-center items-center">
-    <Tendance />
-  </div>
+                  <Tendance />
+                </div>
               } />
+              <Route path="/guidelines" element={<DesignGuidelines />} /> {/* Nouvelle route pour les guidelines */}
               <Route path="/" element={<Navigate to="/colors" replace />} />
             </Routes>
           </div>

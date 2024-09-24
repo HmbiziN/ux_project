@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPalette, faBrush } from '@fortawesome/free-solid-svg-icons';
+import { faPalette, faBrush, faLightbulb } from '@fortawesome/free-solid-svg-icons'; // Ajout de l'icône faLightbulb pour les guidelines
 
 const Sidebar = () => {
   return (
@@ -29,6 +29,18 @@ const Sidebar = () => {
             title="Thème"
           >
             <FontAwesomeIcon icon={faBrush} className="text-xl" />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/guidelines" 
+            className={({ isActive }) => 
+              isActive ? "bg-[#e4c9f9] text-black flex justify-center items-center p-3 rounded-lg w-full text-center" 
+                       : "text-gray-500 hover:text-black flex justify-center items-center p-3 rounded-lg w-full text-center"
+            }
+            title="Guidelines"
+          >
+            <FontAwesomeIcon icon={faLightbulb} className="text-xl" /> {/* Icône Lightbulb pour les Guidelines */}
           </NavLink>
         </li>
       </ul>
