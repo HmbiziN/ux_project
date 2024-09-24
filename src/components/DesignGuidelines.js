@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // Composant principal "Guidelines de Design"
 function DesignGuidelines() {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-8">Guidelines de Design</h1>
+    <div className="p-8 bg-[#f3f4f6] min-h-screen">
+      <h1 className="text-3xl font-bold text-[#333] mb-8 text-center">Guidelines de Design</h1>
       
       <SectionHierarchy />
       <SectionSpacing />
@@ -20,10 +20,10 @@ function SectionHierarchy() {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-4">Hiérarchie Visuelle</h2>
-      <p className="mb-4">Ajustez les tailles de texte pour créer une hiérarchie visuelle claire entre les titres et le contenu.</p>
+      <h2 className="text-2xl font-semibold text-[#333] mb-4">Hiérarchie Visuelle</h2>
+      <p className="text-lg text-[#555] mb-4">Ajustez les tailles de texte pour créer une hiérarchie visuelle claire entre les titres et le contenu.</p>
       <div className="space-y-4">
-        <label>
+        <label className="text-lg text-[#333]">
           Taille du Titre: 
           <input
             type="range"
@@ -33,9 +33,9 @@ function SectionHierarchy() {
             onChange={(e) => setHeadingSize(e.target.value)}
             className="ml-2"
           />
-          <span className="ml-2">{headingSize}px</span>
+          <span className="ml-2 text-[#333]">{headingSize}px</span>
         </label>
-        <label>
+        <label className="text-lg text-[#333]">
           Taille du Texte: 
           <input
             type="range"
@@ -45,13 +45,13 @@ function SectionHierarchy() {
             onChange={(e) => setParagraphSize(e.target.value)}
             className="ml-2"
           />
-          <span className="ml-2">{paragraphSize}px</span>
+          <span className="ml-2 text-[#333]">{paragraphSize}px</span>
         </label>
-        <div className="border p-4">
-          <h3 style={{ fontSize: `${headingSize}px` }} className="font-bold">
+        <div className="border p-4 bg-white rounded shadow-lg">
+          <h3 style={{ fontSize: `${headingSize}px` }} className="font-bold text-[#333]">
             Exemple de Titre
           </h3>
-          <p style={{ fontSize: `${paragraphSize}px` }}>
+          <p style={{ fontSize: `${paragraphSize}px` }} className="text-[#555]">
             Ceci est un exemple de paragraphe. Vous pouvez ajuster les tailles de texte pour voir comment cela impacte la hiérarchie visuelle dans une interface utilisateur.
           </p>
         </div>
@@ -66,9 +66,9 @@ function SectionSpacing() {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-4">Espacements Cohérents</h2>
-      <p className="mb-4">L’espacement entre les éléments permet de structurer une interface de manière agréable. Ajustez les marges ici.</p>
-      <label>
+      <h2 className="text-2xl font-semibold text-[#333] mb-4">Espacements Cohérents</h2>
+      <p className="text-lg text-[#555] mb-4">L’espacement entre les éléments permet de structurer une interface de manière agréable. Ajustez les marges ici.</p>
+      <label className="text-lg text-[#333]">
         Espacement entre les blocs:
         <input
           type="range"
@@ -78,9 +78,9 @@ function SectionSpacing() {
           onChange={(e) => setSpacing(e.target.value)}
           className="ml-2"
         />
-        <span className="ml-2">{spacing}px</span>
+        <span className="ml-2 text-[#333]">{spacing}px</span>
       </label>
-      <div className="mt-4 border p-4">
+      <div className="mt-4 border p-4 bg-white rounded shadow-lg">
         <div style={{ marginBottom: `${spacing}px` }} className="p-4 bg-gray-100">
           Bloc 1
         </div>
@@ -102,10 +102,10 @@ function SectionContrast() {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-semibold mb-4">Utilisation des Couleurs Contrastées</h2>
-      <p className="mb-4">Assurez-vous que le contraste entre le texte et l'arrière-plan est suffisant pour être lisible.</p>
+      <h2 className="text-2xl font-semibold text-[#333] mb-4">Utilisation des Couleurs Contrastées</h2>
+      <p className="text-lg text-[#555] mb-4">Assurez-vous que le contraste entre le texte et l'arrière-plan est suffisant pour être lisible.</p>
       <div className="space-y-4">
-        <label>
+        <label className="text-lg text-[#333]">
           Couleur d'arrière-plan:
           <input
             type="color"
@@ -114,7 +114,7 @@ function SectionContrast() {
             className="ml-2"
           />
         </label>
-        <label>
+        <label className="text-lg text-[#333]">
           Couleur du texte:
           <input
             type="color"
@@ -123,7 +123,7 @@ function SectionContrast() {
             className="ml-2"
           />
         </label>
-        <div className="mt-4 p-4 border" style={{ backgroundColor: bgColor, color: textColor }}>
+        <div className="mt-4 p-4 border bg-white rounded shadow-lg" style={{ backgroundColor: bgColor, color: textColor }}>
           <h3 className="font-bold">Exemple de Texte</h3>
           <p>Ceci est un exemple de texte avec les couleurs sélectionnées. Assurez-vous que le contraste est suffisant pour une bonne lisibilité.</p>
         </div>

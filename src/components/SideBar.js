@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPalette, faBrush, faLightbulb } from '@fortawesome/free-solid-svg-icons'; // Ajout de l'icône faLightbulb pour les guidelines
+import { faPalette, faBrush, faLightbulb, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'; // Ajout de l'icône faClipboardCheck pour la check-list
 
 const Sidebar = () => {
   return (
@@ -40,7 +40,19 @@ const Sidebar = () => {
             }
             title="Guidelines"
           >
-            <FontAwesomeIcon icon={faLightbulb} className="text-xl" /> {/* Icône Lightbulb pour les Guidelines */}
+            <FontAwesomeIcon icon={faLightbulb} className="text-xl" />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/checklist" 
+            className={({ isActive }) => 
+              isActive ? "bg-[#e4c9f9] text-black flex justify-center items-center p-3 rounded-lg w-full text-center" 
+                       : "text-gray-500 hover:text-black flex justify-center items-center p-3 rounded-lg w-full text-center"
+            }
+            title="Check-list"
+          >
+            <FontAwesomeIcon icon={faClipboardCheck} className="text-xl" /> {/* Icône Check-list */}
           </NavLink>
         </li>
       </ul>

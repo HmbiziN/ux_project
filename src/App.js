@@ -8,7 +8,7 @@ import Sidebar from './components/SideBar';
 import Tendance from './components/Tendance';
 import Footer from './components/Footer';
 import DesignGuidelines from './components/DesignGuidelines'; // Import de la page "Guidelines de Design"
-
+import Checklist from './components/CheckList';
 function App() {
   const [selectedPalette, setSelectedPalette] = useState([]);
   const [paletteName, setPaletteName] = useState('');
@@ -68,7 +68,8 @@ function App() {
                   <Tendance />
                 </div>
               } />
-              <Route path="/guidelines" element={<DesignGuidelines />} /> {/* Nouvelle route pour les guidelines */}
+              <Route path="/guidelines" element={<DesignGuidelines />} /> 
+              <Route path="/checklist" element={<Checklist />} />
               <Route path="/" element={<Navigate to="/colors" replace />} />
             </Routes>
           </div>
