@@ -9,6 +9,8 @@ import Tendance from './components/Tendance';
 import Footer from './components/Footer';
 import DesignGuidelines from './components/DesignGuidelines'; // Import de la page "Guidelines de Design"
 import Checklist from './components/CheckList';
+import HeatmapGenerator from './components/HeatMapGenerator';
+import ConsistencyAnalyzer from './components/ConsistencyAnalyzer'; // Import de la page "Analyse de Consistance"
 function App() {
   const [selectedPalette, setSelectedPalette] = useState([]);
   const [paletteName, setPaletteName] = useState('');
@@ -71,6 +73,9 @@ function App() {
               <Route path="/guidelines" element={<DesignGuidelines />} /> 
               <Route path="/checklist" element={<Checklist />} />
               <Route path="/" element={<Navigate to="/colors" replace />} />
+              <Route path="/heatmap" element={<HeatmapGenerator />} /> {/* Nouvelle route */}
+              <Route path="/consistency" element={<ConsistencyAnalyzer />} /> {/* Nouvelle route */}
+ 
             </Routes>
           </div>
         </div>
